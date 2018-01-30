@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-multi",
-  "version": "0.0.1",
+  "version": "0.0.2-1",
   "description": "Run multiple jest runners within one project",
   "main": "src/index.js",
   "scripts": {
@@ -10,8 +10,13 @@
     "release": "semantic-release"
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"],
-    "*": ["jest --bail --findRelatedTests"]
+    "*.{js,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*": [
+      "jest --bail --findRelatedTests"
+    ]
   },
   "release": {
     "verifyConditions": "@semantic-release/github"
@@ -23,7 +28,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/DanielMSchmidt/jest-runner-multi.git"
   },
-  "keywords": ["jest", "jest-runner"],
+  "keywords": [
+    "jest",
+    "jest-runner"
+  ],
   "author": "Daniel Schmidt <danielmschmidt92@gmail.com>",
   "license": "MIT",
   "bugs": {

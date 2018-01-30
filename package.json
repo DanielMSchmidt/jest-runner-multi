@@ -1,0 +1,46 @@
+{
+  "name": "jest-runner-multi",
+  "version": "0.0.1",
+  "description": "Run multiple jest runners within one project",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "precommit": "lint-staged",
+    "release": "semantic-release"
+  },
+  "lint-staged": {
+    "*": [
+      "jest --bail --findRelatedTests"
+    ]
+  },
+  "release": {
+    "verifyConditions": "@semantic-release/github"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DanielMSchmidt/jest-runner-multi.git"
+  },
+  "keywords": [
+    "jest",
+    "jest-runner"
+  ],
+  "author": "Daniel Schmidt <danielmschmidt92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielMSchmidt/jest-runner-multi/issues"
+  },
+  "homepage": "https://github.com/DanielMSchmidt/jest-runner-multi#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^6.0.2",
+    "@commitlint/config-conventional": "^6.0.2",
+    "husky": "^0.14.3",
+    "jest": "^22.1.4",
+    "lint-staged": "^6.1.0",
+    "semantic-release": "^12.4.1",
+    "stylelint-config-standard": "^18.0.0"
+  }
+}

@@ -1,4 +1,4 @@
-# Jest Runner Multi
+# Jest Runner Multi [![Build Status](https://travis-ci.org/DanielMSchmidt/jest-runner-multi.svg?branch=master)](https://travis-ci.org/DanielMSchmidt/jest-runner-multi)
 
 If you want to have multiple jest runners in the same project, this project is for you.
 

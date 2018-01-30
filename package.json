@@ -10,9 +10,8 @@
     "release": "semantic-release"
   },
   "lint-staged": {
-    "*": [
-      "jest --bail --findRelatedTests"
-    ]
+    "*.{js,json,css,md}": ["prettier --write", "git add"],
+    "*": ["jest --bail --findRelatedTests"]
   },
   "release": {
     "verifyConditions": "@semantic-release/github"
@@ -24,10 +23,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/DanielMSchmidt/jest-runner-multi.git"
   },
-  "keywords": [
-    "jest",
-    "jest-runner"
-  ],
+  "keywords": ["jest", "jest-runner"],
   "author": "Daniel Schmidt <danielmschmidt92@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -40,7 +36,11 @@
     "husky": "^0.14.3",
     "jest": "^22.1.4",
     "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2",
     "semantic-release": "^12.4.1",
     "stylelint-config-standard": "^18.0.0"
+  },
+  "dependencies": {
+    "create-jest-runner": "^0.2.0"
   }
 }

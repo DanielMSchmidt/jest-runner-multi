@@ -49,6 +49,7 @@
     "stylelint-config-standard": "^18.0.0"
   },
   "dependencies": {
-    "create-jest-runner": "^0.2.0"
+    "create-jest-runner": "^0.2.0",
+    "minimatch": "^3.0.4"
   }
 }

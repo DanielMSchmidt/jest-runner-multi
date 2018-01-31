@@ -6,16 +6,16 @@ const ownConfig = require(root + "/package.json")["jest-runner-multi"];
 
 // Load runner
 const runners = {};
-// Object.values(ownConfig).forEach(runnerName => runners[runnerName] = require.resolve(runnerName));
 Object.values(ownConfig).forEach(
-  runnerName => (runners[runnerName] = runnerName)
+  runnerName => (runners[runnerName] = require(runnerName))
 );
 
 module.exports = ({ testPath, config, globalConfig }) => {
   const start = new Date();
   const runnersForPath = Object.entries(ownConfig)
     .filter(([pattern]) => minimatch(testPath, pattern))
-    .map(([, runnerName]) => runners[runnerName]);
+    .map(([, runnerName]) => new runners[runnerName](globalConfig));
+  // TODO: move ^^^^ this into a cached function, for performance
 
   if (!runnersForPath.length) {
     // No runner found, so we skip

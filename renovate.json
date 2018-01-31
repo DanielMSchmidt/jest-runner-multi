@@ -4,5 +4,6 @@
   "automergeType": "branch-push",
   "major": {
     "automerge": false
-  }
+  },
+  "pinVersions": false
 }

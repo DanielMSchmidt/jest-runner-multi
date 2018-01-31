@@ -39,14 +39,14 @@
   },
   "homepage": "https://github.com/DanielMSchmidt/jest-runner-multi#readme",
   "devDependencies": {
-    "@commitlint/cli": "^6.0.2",
-    "@commitlint/config-conventional": "^6.0.2",
-    "husky": "^0.14.3",
-    "jest": "^22.1.4",
-    "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2",
-    "semantic-release": "^12.4.1",
-    "stylelint-config-standard": "^18.0.0"
+    "@commitlint/cli": "6.0.2",
+    "@commitlint/config-conventional": "6.0.2",
+    "husky": "0.14.3",
+    "jest": "22.1.4",
+    "lint-staged": "6.1.0",
+    "prettier": "1.10.2",
+    "semantic-release": "12.4.1",
+    "stylelint-config-standard": "18.0.0"
   },
   "dependencies": {
     "create-jest-runner": "^0.2.0",
